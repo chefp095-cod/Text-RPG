@@ -2,25 +2,25 @@
 
 #include "PCH.h"
 
-std::string GetSwordType(E_SWORD SwordType)
+std::string GetSwordType(ItemType::E_SWORD SwordType)
 {
 	std::string strSword;
 
 	switch (SwordType)
 	{
-	case E_OLDS:
+	case ItemType::E_SWORD::E_OLDS:
 		strSword = "낡은 검";
 
 		break;
-	case E_NORMS:
+	case ItemType::E_SWORD::E_NORMS:
 		strSword = "일반 검";
 
 		break;
-	case E_FANCYS:
+	case ItemType::E_SWORD::E_FANCYS:
 		strSword = "화려한 검";
 
 		break;
-	case E_EXO:
+	case ItemType::E_SWORD::E_EXO:
 		strSword = "엑소칼리버";
 
 		break;
@@ -29,21 +29,21 @@ std::string GetSwordType(E_SWORD SwordType)
 	return strSword;
 }
 
-std::string GetSheildType(E_SHEILD SheildType)
+std::string GetSheildType(ItemType::E_SHEILD SheildType)
 {
 	std::string strSheild;
 
 	switch (SheildType)
 	{
-	case E_WOOD:
+	case ItemType::E_SHEILD::E_WOOD:
 		strSheild = "나무 방패";
 
 		break;
-	case E_MERAL:
+	case ItemType::E_SHEILD::E_MERAL:
 		strSheild = "철제 방패";
 
 		break;
-	case E_LEGENDSH:
+	case ItemType::E_SHEILD::E_LEGENDSH:
 		strSheild = "미카엘 방패";
 
 		break;
@@ -52,25 +52,25 @@ std::string GetSheildType(E_SHEILD SheildType)
 	return strSheild;
 }
 
-std::string GetWandType(E_WAND WandType)
+std::string GetWandType(ItemType::E_WAND WandType)
 {
 	std::string strWand;
 
 	switch (WandType)
 	{
-	case E_OLDW:
+	case ItemType::E_WAND::E_OLDW:
 		strWand = "낡은 지팡이";
 
 		break;
-	case E_NORMW:
+	case ItemType::E_WAND::E_NORMW:
 		strWand = "일반 지팡이";
 
 		break;
-	case E_FANCYW:
+	case ItemType::E_WAND::E_FANCYW:
 		strWand = "화려한 지팡이";
 
 		break;
-	case E_MYTH:
+	case ItemType::E_WAND::E_MYTH:
 		strWand = "딱총나무 지팡이";
 
 		break;
@@ -79,25 +79,25 @@ std::string GetWandType(E_WAND WandType)
 	return strWand;
 }
 
-std::string GetSouldType(E_SOUL SoulType)
+std::string GetSouldType(ItemType::E_SOUL SoulType)
 {
 	std::string strSoul;
 
 	switch (SoulType)
 	{
-	case E_BEGIN:
+	case ItemType::E_SOUL::E_BEGIN:
 		strSoul = "초보자 소울";
 
 		break;
-	case E_NORMSO:
+	case ItemType::E_SOUL::E_NORMSO:
 		strSoul = "일반 소울";
 
 		break;
-	case E_HCSO:
+	case ItemType::E_SOUL::E_HCSO:
 		strSoul = "고급 소울";
 
 		break;
-	case E_LENGENDSO:
+	case ItemType::E_SOUL::E_LENGENDSO:
 		strSoul = "피닉스";
 
 		break;
@@ -106,7 +106,7 @@ std::string GetSouldType(E_SOUL SoulType)
 	return strSoul;
 }
 
-stSword fnSword()
+stSword const fnSword()
 {
 	stSword Swo;
 
@@ -118,7 +118,7 @@ stSword fnSword()
 	return Swo;
 };
 
-stSheild fnSheild()
+stSheild const fnSheild()
 {
 	stSheild She;
 
@@ -129,7 +129,7 @@ stSheild fnSheild()
 	return She;
 };
 
-stWand fnWand()
+stWand const fnWand()
 {
 	stWand Wan;
 
@@ -141,7 +141,7 @@ stWand fnWand()
 	return Wan;
 };
 
-stSoul fnSoul()
+stSoul const fnSoul()
 {
 	stSoul Soul;
 

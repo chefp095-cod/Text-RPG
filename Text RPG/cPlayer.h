@@ -8,34 +8,37 @@ public:
 	cPlayer();
 	virtual ~cPlayer();
 
-	int GetPlayerLvl();
+	int GetMaxLvl() const;
+	void SetMaxLvl(int nNewMax);
+	int GetPlayerLvl() const;
 	void SetPlayerLvl();
+	bool isEquip();
 
 	virtual void LvlUpStats();
 	virtual void ShowStats();
 
 	virtual float GetAtkDamage();
 	virtual void SetAtkDamage(std::string strWeapon);
-	virtual float GetPlayerHP();
-	virtual void SetPlayerHP();
+	virtual float GetMaxHP();
+	virtual void SetMaxHP(float nMaxHP);
 	virtual float GetPlayerMN();
 	virtual void SetPlayerMN();
 	virtual int GetPlayerAr();
 	virtual void SetPlayerAr();
 
 protected:
+
+private:
 	int nPlayerLvl;
-	float fPlayerHP;
+	int nMaxLvl;
+	float fMaxHP;
 	float fCurrentHP;
-	float fPlayerMN;
+	float fMaxMN;
 	float fCurrentMN;
 	float fBaseAtkDamage;
 	float fAtkDamage;
 	float fSKDamage;
 	int nPlayerAr;
 	int nPlayerEXP;
-	int nMaxEXP = 100;
-
-private:
-	int nMaxLvl;
+	int nMaxEXP;
 };

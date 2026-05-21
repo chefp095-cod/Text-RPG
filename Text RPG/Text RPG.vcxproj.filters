@@ -13,15 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{2924a2e7-10a4-4837-87bc-ed070303e3e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Text RPG.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="cPlayer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="cWarrior.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ItemData.cpp">
@@ -30,18 +27,18 @@
     <ClCompile Include="cEnemy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="cPlayer.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="cWarrior.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cPlayer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Shuffle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PCH.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="cWarrior.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ItemData.h">
@@ -49,6 +46,18 @@
     </ClInclude>
     <ClInclude Include="cEnemy.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTypes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlayer.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="stPlayerData.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="cWarrior.h">
+      <Filter>Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

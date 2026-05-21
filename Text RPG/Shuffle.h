@@ -1,6 +1,5 @@
 #pragma once
 
-
 int nShuffle()
 {
 	int nRand = rand() % 100;

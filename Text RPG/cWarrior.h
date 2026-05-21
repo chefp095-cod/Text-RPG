@@ -4,17 +4,16 @@
 class cWarrior : public cPlayer
 {
 public:
-	cWarrior();
+	cWarrior(cPlayer* C_Character);
 	~cWarrior() override;
 
-	void ShowStats() override;
-	void LvlUpStats() override;
- 
 	int GetBlock();
 	void SetBlock();
 
-private:
+	void ShowStats() final;
+	void LvlUpStats() final;
+ 
+protected:
 	int nBlock;
-	int nMaxLvl = 15;
 };
 

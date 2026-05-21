@@ -2,19 +2,20 @@
 #include "cPlayer.h"
 
 cPlayer::cPlayer()
+	: nPlayerLvl(1)
+	, nMaxLvl(5)
+	  
+	, fPlayerHP(500.0f)
+	, fCurrentHP(500.0f)
+	  
+	, fPlayerMN(300.0f)
+	, fCurrentMN(300.0f)
+	  
+	, fBaseAtkDamage(30.0f)
+	, nPlayerAr(10)
+	, nPlayerEXP(0)
+	, nMaxEXP(100)
 {
-	this->nPlayerLvl = 1;
-	this->nMaxLvl = 10;
-
-	this->fPlayerHP = 1000.0f;
-	this->fCurrentHP = 1000.0f;
-
-	this->fPlayerMN = 500.0f;
-	this->fCurrentMN = 500.0f;
-
-	this->fBaseAtkDamage = 30.0f;
-	this->nPlayerAr = 10;
-	this->nPlayerEXP = 0;
 }
 
 cPlayer::~cPlayer()
@@ -26,47 +27,68 @@ void cPlayer::ShowStats()
 {
 	std::cout << "모험가 스탯 상세" << std::endl;
 	std::cout << "========================================" << std::endl;
-	std::cout << "플레이어 레벨 : " << this->nPlayerLvl << std::endl;
-	std::cout << "플레이어 HP : " << this->fCurrentHP << " / " << this->fPlayerHP << std::endl;
-	std::cout << "플레이어 마나 : " << this->fCurrentMN << " / " << this->fPlayerMN << std::endl;
-	std::cout << "플레이어 공격력 : " << this->fAtkDamage << std::endl;
-	std::cout << "플레이어 방어력 : " << this->nPlayerAr << std::endl;
+	std::cout << "플레이어 레벨 : " << nPlayerLvl << std::endl;
+	std::cout << "플레이어 HP : " << fCurrentHP << " / " << fPlayerHP << std::endl;
+	std::cout << "플레이어 마나 : " << fCurrentMN << " / " << fPlayerMN << std::endl;
+	std::cout << "플레이어 공격력 : " << fAtkDamage << std::endl;
+	std::cout << "플레이어 방어력 : " << nPlayerAr << std::endl;
 	std::cout << "========================================" << std::endl;
-	std::cout << "플레이어 경험치 : " << this->nPlayerEXP << " / " << this->nMaxEXP << std::endl;
+	std::cout << "플레이어 경험치 : " << nPlayerEXP << " / " << nMaxEXP << std::endl;
 }
 
-int cPlayer::GetPlayerLvl()
+int cPlayer::GetMaxLvl() const
+{
+	return nMaxLvl;
+}
+
+void cPlayer::SetMaxLvl(int nNewMax)
+{
+	nMaxLvl = nNewMax;
+}
+
+int cPlayer::GetPlayerLvl() const
 {
 	return nPlayerLvl; // 현재 클래스 내부의 멤버를 반환 this-> 가 생략된걸로 치부됨
 }
 
 void cPlayer::SetPlayerLvl()
 {
-	if (this->nPlayerEXP >= this->nMaxEXP)
+	while (nPlayerEXP >= nMaxEXP)
 	{
 		std::cout << "플레이어 레벨업!!!" << std::endl;
+
+		nPlayerEXP -= nMaxEXP;
 
 		LvlUpStats();
 		SetPlayerHP();
 		SetPlayerMN();
 	}
+
+	if (nPlayerLvl >= nMaxLvl)
+	{
+		nPlayerEXP = 0;
+	}
 }
 
 void cPlayer::LvlUpStats()
 {
-	if (this->nMaxLvl > 10)
+	if (nPlayerLvl >= nMaxLvl)
 	{
+		nPlayerLvl = nMaxLvl;
+
 		return;
 	}
 
-	else if (this->nMaxLvl <= 10)
-	{
-		this->nPlayerLvl++;
-		this->fPlayerHP += 200;
-		this->fPlayerMN += 50;
-		this->nPlayerAr += 5;
-		this->nMaxEXP *= 3;
-	}
+		nPlayerLvl++;
+		SetMaxHP(GetMaxHP() + 200.0f);
+		fPlayerMN += 50;
+		nPlayerAr += 5;
+		nMaxEXP *= 3;
+}
+
+bool isEquip()
+{
+
 }
 
 float cPlayer::GetAtkDamage()
@@ -79,14 +101,14 @@ void cPlayer::SetAtkDamage(std::string strWeapon)
 	
 }
 
-float cPlayer::GetPlayerHP()
+float cPlayer::GetMaxHP()
 {
-	return fPlayerHP;
+	return fMaxHP;
 }
 
-void cPlayer::SetPlayerHP()
+void cPlayer::SetMaxHP(float fMaxHP)
 {
-	this->fCurrentHP = this->fPlayerHP;
+	this->fMaxHP = fMaxHP;
 }
 
 float cPlayer::GetPlayerMN()
@@ -96,7 +118,7 @@ float cPlayer::GetPlayerMN()
 
 void cPlayer::SetPlayerMN()
 {
-	this->fCurrentMN = this->fPlayerMN;
+	fCurrentMN = fPlayerMN;
 }
 
 int cPlayer::GetPlayerAr()

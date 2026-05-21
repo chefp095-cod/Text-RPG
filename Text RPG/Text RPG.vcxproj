@@ -136,10 +136,12 @@
   <ItemGroup>
     <ClInclude Include="cEnemy.h" />
     <ClInclude Include="cPlayer.h" />
+    <ClInclude Include="GameTypes.h" />
     <ClInclude Include="ItemData.h" />
     <ClInclude Include="PCH.h" />
     <ClInclude Include="Shuffle.h" />
     <ClInclude Include="cWarrior.h" />
+    <ClInclude Include="stPlayerData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
