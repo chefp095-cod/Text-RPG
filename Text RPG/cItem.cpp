@@ -43,6 +43,7 @@ void cItem::ItemInit(ItemData::E_ITEMID m_ID)
 	case ItemData::SWORD_EXO:
 		m_Item = { "엑스칼리버", 65.5f, 0.0f, 5, 1500, 500 };
 		break;
+
 	case ItemData::SHIELD_WOOD:
 		m_Item = { "나무 방패", 0.0f, 0.0f, 1, 70, 5 };
 		break;
@@ -52,6 +53,7 @@ void cItem::ItemInit(ItemData::E_ITEMID m_ID)
 	case ItemData::SHIELD_LEGEND:
 		m_Item = { "미카엘 방패", 0.0f, 0.0f, 7, 1250, 450 };
 		break;
+
 	case ItemData::WAND_OLD:
 		m_Item = { "낡은 지팡이", 0.0f, 15.0f, 0 ,120, 30 };
 		break;
@@ -64,6 +66,7 @@ void cItem::ItemInit(ItemData::E_ITEMID m_ID)
 	case ItemData::WAND_MYTH:
 		m_Item = { "딱총나무 지팡이", 0.0f, 99.9f, 0, 1800, 650 };
 		break;
+
 	case ItemData::SOUL_BEGIN:
 		m_Item = { "초보자 소울", 0.0f, 30.5f, 0, 105, 20 };
 		break;
@@ -73,5 +76,52 @@ void cItem::ItemInit(ItemData::E_ITEMID m_ID)
 	case ItemData::SOUL_HC:
 		m_Item = { "피닉스 소울", 0.0f, 105.5f, 0, 1300, 455 };
 		break;
+	}
+}
+
+ItemData::E_ITEMTYPE cItem::GetType() const
+{
+	return m_Type;
+}
+
+ItemData::E_ITEMID cItem::GetID() const
+{
+	return m_ID;
+}
+
+ItemData::stItemData cItem::GetData() const
+{
+	return m_Item;
+}
+
+void cItem::ShowStats()
+{
+	if (m_Type == ItemData::E_ITEMTYPE::E_SWORD)
+	{
+		std::cout << "물리 공격력 : " << m_Item.fItemAtkDamage << std::endl;
+		std::cout << "억지력 : " << m_Item.nBlock << std::endl;
+		std::cout << "구매 가격 : " << m_Item.nBuyPrice << std::endl;
+		std::cout << "판매 가격 : " << m_Item.nSellPrice << std::endl;
+	}
+
+	else if (m_Type == ItemData::E_ITEMTYPE::E_SHEILD)
+	{
+		std::cout << "억지력 : " << m_Item.nBlock << std::endl;
+		std::cout << "구매 가격 : " << m_Item.nBuyPrice << std::endl;
+		std::cout << "판매 가격 : " << m_Item.nSellPrice << std::endl;
+	}
+
+	else if (m_Type == ItemData::E_ITEMTYPE::E_WAND)
+	{
+		std::cout << "스킬 공격력 : " << m_Item.fItemSKDamage << std::endl;
+		std::cout << "구매 가격 : " << m_Item.nBuyPrice << std::endl;
+		std::cout << "판매 가격 : " << m_Item.nSellPrice << std::endl;
+	}
+
+	else if (m_Type == ItemData::E_ITEMTYPE::E_SOUL)
+	{
+		std::cout << "스킬 공격력 : " << m_Item.fItemSKDamage << std::endl;
+		std::cout << "구매 가격 : " << m_Item.nBuyPrice << std::endl;
+		std::cout << "판매 가격 : " << m_Item.nSellPrice << std::endl;
 	}
 }

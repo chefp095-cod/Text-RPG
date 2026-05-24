@@ -16,13 +16,13 @@
     <Filter Include="Player">
       <UniqueIdentifier>{2924a2e7-10a4-4837-87bc-ed070303e3e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{532f1846-5196-4e47-a143-587488f8101e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Text RPG.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemData.cpp">
-      <Filter>헤더 파일</Filter>
     </ClCompile>
     <ClCompile Include="cEnemy.cpp">
       <Filter>소스 파일</Filter>
@@ -34,10 +34,10 @@
       <Filter>Player</Filter>
     </ClCompile>
     <ClCompile Include="cInventory.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Item</Filter>
     </ClCompile>
     <ClCompile Include="cItem.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,9 +45,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PCH.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemData.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="cEnemy.h">
@@ -66,10 +63,10 @@
       <Filter>Player</Filter>
     </ClInclude>
     <ClInclude Include="cInventory.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>Item</Filter>
     </ClInclude>
     <ClInclude Include="cItem.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

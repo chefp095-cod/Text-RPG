@@ -2,10 +2,7 @@
 
 #include "PCH.h"
 
-stSword const fnSword();
-stSheild const fnSheild();
-stWand const fnWand();
-stSoul const fnSoul();
+class cItem;
 
 class cInventory
 {
@@ -15,15 +12,12 @@ public:
 
 	void ShowInven();
 
-	void AddItem();
+	void AddItem(cItem* ptrItem);
+	void DeleteItem(cItem* ptrItem);
 
 private:
-	std::vector<stSword> vecItem;
+	std::vector<cItem*> vecItem;
 	const int nMax_Slots = 5;
 
-	stSword Swo;
-	stSheild She;
-	stWand Wan;
-	stSoul Soul;
 };
 

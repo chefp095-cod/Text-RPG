@@ -3,6 +3,7 @@
 #include "stGameData.h"
 
 class cEnemy;
+class cItem;
 
 class cPlayer
 {

@@ -1,12 +1,10 @@
 #include "cInventory.h"
+#include "cItem.h"
 #include "PCH.h"
 
 cInventory::cInventory()
 {
-	Swo = fnSword();
-	She = fnSheild();
-	Wan = fnWand();
-	Soul = fnSoul();
+	
 }
 
 cInventory::~cInventory()
@@ -14,12 +12,15 @@ cInventory::~cInventory()
 
 }
 
-void ShowInven()
+void cInventory::ShowInven()
 {
+	std::cout << "================ <인벤토리> ================" << std::endl;
+	std::cout << "인벤토리 상태 : " << vecItem.size() << " / " << nMax_Slots << std::endl;
+
 	
 }
 
-void AddItem()
+void cInventory::AddItem(cItem* ptrItem)
 {
-
+	if ()
 }

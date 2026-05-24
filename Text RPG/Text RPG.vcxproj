@@ -131,7 +131,6 @@
     <ClCompile Include="cInventory.cpp" />
     <ClCompile Include="cItem.cpp" />
     <ClCompile Include="cPlayer.cpp" />
-    <ClCompile Include="ItemData.cpp" />
     <ClCompile Include="Text RPG.cpp" />
     <ClCompile Include="cWarrior.cpp" />
   </ItemGroup>
@@ -141,7 +140,6 @@
     <ClInclude Include="cItem.h" />
     <ClInclude Include="cPlayer.h" />
     <ClInclude Include="GameTypes.h" />
-    <ClInclude Include="ItemData.h" />
     <ClInclude Include="PCH.h" />
     <ClInclude Include="Shuffle.h" />
     <ClInclude Include="cWarrior.h" />
