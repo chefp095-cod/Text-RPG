@@ -39,7 +39,7 @@ bool nShuffleLow()
 
 bool nShuffleLegend()
 {
-	if (nShuffle() < 2)
+	if (nShuffle() < 5)
 	{
 		return true;
 	}

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "stGameData.h"
+
 class cEnemy;
 
 class cPlayer
@@ -11,34 +13,32 @@ public:
 	int GetMaxLvl() const;
 	void SetMaxLvl(int nNewMax);
 	int GetPlayerLvl() const;
-	void SetPlayerLvl();
+	void SetPlayerLvl(int nPlayerLvl);
 	bool isEquip();
 
+	virtual void LvlUp();
 	virtual void LvlUpStats();
 	virtual void ShowStats();
 
-	virtual float GetAtkDamage();
-	virtual void SetAtkDamage(std::string strWeapon);
-	virtual float GetMaxHP();
-	virtual void SetMaxHP(float nMaxHP);
-	virtual float GetPlayerMN();
-	virtual void SetPlayerMN();
-	virtual int GetPlayerAr();
-	virtual void SetPlayerAr();
+	float GetBaseAtkDamage();
+	void SetBaseAtkDamage(float fBaseAtkDamage);
+	float GetMaxHP();
+	void SetMaxHP(float nMaxHP);
+	float GetCurrentHP();
+	void SetCurrentHP(float fCurrentHP);
+	float GetMaxMN();
+	void SetMaxMN(float fMaxMN);
+	float GetCurrentMN();
+	void SetCurrentMN(float fCurrentMN);
+	int GetPlayerAr();
+	void SetPlayerAr(int nPlayerAr);
+
+	int GetPlayerGold();
+	void SetPlayerGold(int nGold);
 
 protected:
+	Player::stBaseData Base;
 
 private:
-	int nPlayerLvl;
-	int nMaxLvl;
-	float fMaxHP;
-	float fCurrentHP;
-	float fMaxMN;
-	float fCurrentMN;
-	float fBaseAtkDamage;
-	float fAtkDamage;
-	float fSKDamage;
-	int nPlayerAr;
-	int nPlayerEXP;
-	int nMaxEXP;
+	
 };

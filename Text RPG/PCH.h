@@ -8,7 +8,5 @@
 #include <vector>
 #include <queue>
 
-#include "cPlayer.h"
-
-#include "stItemData.h"
+#include "ItemData.h"
 #include "Shuffle.h"

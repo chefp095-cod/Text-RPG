@@ -10,7 +10,6 @@ namespace ItemType
 
 // ItemType itemType = ItemType::Weapon;
 
-
 // enum			INT 자동변환 됨		안정성 낮음		코드길이가 짧음
 // enum_class	INT 자동변환 안됨	안정성 높음		코드길이가 김
 

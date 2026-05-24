@@ -4,7 +4,7 @@
 class cWarrior : public cPlayer
 {
 public:
-	cWarrior(cPlayer* C_Character);
+	cWarrior();
 	~cWarrior() override;
 
 	int GetBlock();

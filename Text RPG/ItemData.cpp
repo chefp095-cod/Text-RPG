@@ -2,6 +2,53 @@
 
 #include "PCH.h"
 
+stSword const fnSword()
+{
+	stSword Swo;
+
+	Swo.fOldSword = 10.0f;
+	Swo.fNormSword = 20.5f;
+	Swo.fFancySword = 30.8f;
+	Swo.fExo = 55.9f;
+
+	return Swo;
+};
+
+stSheild const fnSheild()
+{
+	stSheild She;
+
+	She.fWoodenSh = 5.0f;
+	She.fMetalSh = 15.0f;
+	She.fLegendSh = 25.5f;
+
+	return She;
+};
+
+stWand const fnWand()
+{
+	stWand Wan;
+
+	Wan.fOldWand = 8.0f;
+	Wan.fNormWand = 15.0f;
+	Wan.fFancyWand = 25.5f;
+	Wan.fMythWand = 46.9f;
+
+	return Wan;
+};
+
+stSoul const fnSoul()
+{
+	stSoul Soul;
+
+	Soul.fBeginSoul = 10.0f;
+	Soul.fNormSoul = 25.0f;
+	Soul.fHCSoul = 50.0f;
+	Soul.fLegSoul = 80.5f;
+
+	return Soul;
+};
+
 std::string GetSwordType(ItemType::E_SWORD SwordType)
 {
 	std::string strSword;
@@ -21,7 +68,7 @@ std::string GetSwordType(ItemType::E_SWORD SwordType)
 
 		break;
 	case ItemType::E_SWORD::E_EXO:
-		strSword = "엑소칼리버";
+		strSword = "엑스칼리버";
 
 		break;
 	}
@@ -79,7 +126,7 @@ std::string GetWandType(ItemType::E_WAND WandType)
 	return strWand;
 }
 
-std::string GetSouldType(ItemType::E_SOUL SoulType)
+std::string GetSoulType(ItemType::E_SOUL SoulType)
 {
 	std::string strSoul;
 
@@ -98,57 +145,10 @@ std::string GetSouldType(ItemType::E_SOUL SoulType)
 
 		break;
 	case ItemType::E_SOUL::E_LENGENDSO:
-		strSoul = "피닉스";
+		strSoul = "피닉스 소울";
 
 		break;
 	}
 
 	return strSoul;
 }
-
-stSword const fnSword()
-{
-	stSword Swo;
-
-	Swo.fOldSword = 10.0f;
-	Swo.fNormSword = 20.5f;
-	Swo.fFancySword = 30.8f;
-	Swo.fExo = 55.9f;
-
-	return Swo;
-};
-
-stSheild const fnSheild()
-{
-	stSheild She;
-
-	She.fWoodenSh = 5.0f;
-	She.fMetalSh = 15.0f;
-	She.fLegendSh = 25.5f;
-
-	return She;
-};
-
-stWand const fnWand()
-{
-	stWand Wan;
-
-	Wan.fOldWand = 8.0f;
-	Wan.fNormWand = 15.0f;
-	Wan.fFancyWand = 25.5f;
-	Wan.fMythWand = 46.9f;
-
-	return Wan;
-};
-
-stSoul const fnSoul()
-{
-	stSoul Soul;
-
-	Soul.fBeginSoul = 10.0f;
-	Soul.fNormSoul = 25.0f;
-	Soul.fHCSoul = 50.0f;
-	Soul.fLegSoul = 80.5f;
-
-	return Soul;
-};

@@ -4,5 +4,5 @@ int main()
 {
     srand(time(NULL));
 
-    cPlayer* C_Character;
+    cPlayer* C_Character = nullptr;
 }
